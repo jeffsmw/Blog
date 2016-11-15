@@ -1,0 +1,12 @@
+<%= @comment.errors.full_messages.join(', ') %>
+<%= form_for [@post, @comment] do |f| %>
+  <div>
+    <%= f.label :body, "Comment here:" %>
+  </div>
+  <div>
+    <%= f.text_area :body %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

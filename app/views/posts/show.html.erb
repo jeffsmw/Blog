@@ -5,3 +5,12 @@
 <%= link_to 'edit', edit_post_path(@post) %>
 <%= link_to 'delete', post_path(@post),
     method: :delete, data: { confirm: 'Are you sure?' } %>
+<hr />
+<%= render '/comments/form' %>
+<%# render '/comments/comment' %>
+<div>
+  <% @comments.each do |c| %>
+    <%=  c.body %>
+    <hr />
+  <% end %>
+</div>

@@ -1,0 +1,5 @@
+<h1>Newest Posts</h1>
+<% @posts.each do |post| %>
+  <%= link_to post.title, post %>
+  <hr />
+<% end %>
